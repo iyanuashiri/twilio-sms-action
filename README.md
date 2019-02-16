@@ -20,10 +20,10 @@ action "notification" {
         "TWILIO_AUTH_TOKEN",
         "TWILIO_CALLER_ID"
     ]
-    args = "15551234567 New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR."
+    args = "New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR."
 }
 ```
 
-`will send `New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR` to `15551234567`. 
+`will send `New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR` to `$RECIPIENT_NUMBER`. 
 
 `

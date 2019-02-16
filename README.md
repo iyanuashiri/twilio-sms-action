@@ -24,6 +24,6 @@ action "notification" {
 }
 ```
 
-`will send `New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR` to `$RECIPIENT_NUMBER`. 
+will send `New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR` to `$RECIPIENT_NUMBER`. 
 
 `

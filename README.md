@@ -18,7 +18,8 @@ action "notification" {
     secrets = [
         "TWILIO_ACCOUNT_SID",
         "TWILIO_AUTH_TOKEN",
-        "TWILIO_CALLER_ID"
+        "TWILIO_CALLER_ID",
+        "RECIPIENT_NUMBER"
     ]
     args = "New pull on $GITHUB_REPOSITORY from $GITHUB_ACTOR."
 }

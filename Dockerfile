@@ -1,4 +1,4 @@
-FROM python:3
+FROM debian:9.6-slim
 
 LABEL "com.github.actions.name"="Twilio Send SMS"
 LABEL "com.github.actions.description"="Send an SMS using Twilio."
@@ -8,12 +8,7 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="http://github.com/iyanuashiri/twilio-sms-action"
 LABEL "maintainer"="Iyanu Ajao <ajaoiyanu@gmail.com>"
 
+RUN apt-get update && apt-get install -y curl
 
-ADD send_sms.py
-
-RUN pip install twilio
-
-CMD [ "python", "./send_sms.py" ]
-
-
-ENTRYPOINT ["send_sms"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]

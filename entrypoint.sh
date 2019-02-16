@@ -6,6 +6,21 @@ if [[ -z "$TWILIO_AUTH_TOKEN" ]]; then
   exit 1
 fi
 
+if [[ -z "$TWILIO_ACCOUNT_SID" ]]; then
+  echo "Set the TWILIO_ACCOUNT_SID secret."
+  exit 1
+fi
+
+if [[ -z "$TWILIO_CALLER_ID" ]]; then
+  echo "Set the TWILIO_CALLER_ID secret."
+  exit 1
+fi
+
+if [[ -z "$RECIPIENT_NUMBER" ]]; then
+  echo "Set the RECIPIENT_NUMBER secret."
+  exit 1
+fi
+
 
 curl -X POST -d "$*" \
     -d "From=${TWILIO_CALLER_ID}" -d "To=${RECIPIENT_NUMBER}" \

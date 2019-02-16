@@ -14,3 +14,7 @@ def send_sms(body, from_, to):
     )
 
     return message.sid
+
+if __name__ == '__main__':
+    send_sms(body, from_, to)
+    

@@ -15,5 +15,5 @@ RUN pip install twilio
 
 CMD [ "python", "./send_sms.py" ]
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+
+ENTRYPOINT ["send_sms"]

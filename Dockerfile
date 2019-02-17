@@ -1,4 +1,4 @@
-FROM debian:9.6-slim
+FROM debian:9.5-slim
 
 LABEL "com.github.actions.name"="Twilio Send SMS"
 LABEL "com.github.actions.description"="Send an SMS using Twilio."
